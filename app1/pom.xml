@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.protectsoft.company</groupId>
+    <artifactId>app1</artifactId>
+    <packaging>pom</packaging>
+    <name>app1</name>
+    
+    <parent>
+        <groupId>com.protectsoft</groupId>
+        <artifactId>company</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    
+    <modules>
+        <module>app1-ejb</module>
+        <module>app1-jpa</module>
+        <module>app1-web</module>
+    </modules>
+    
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>          
+        <app1.jpa.version>1.0-SNAPSHOT</app1.jpa.version>  
+        <app1.ejb.version>1.0-SNAPSHOT</app1.ejb.version>
+    </properties>
+    
+    <dependencies>
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-web-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.protectsoft.company</groupId>
+            <artifactId>commons</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+   
+    
+</project>
