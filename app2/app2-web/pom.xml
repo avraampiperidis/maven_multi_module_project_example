@@ -21,6 +21,10 @@
     </properties>
     
     <dependencies>
+        <dependency>
+            <groupId>com.protectsoft.company</groupId>
+            <artifactId>jasper-report-ejb</artifactId>
+        </dependency>
          <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>app2-ejb</artifactId>

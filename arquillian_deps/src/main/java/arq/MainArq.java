@@ -3,18 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.protectsoft.company.app1.web;
-
-import javax.ws.rs.ApplicationPath;
+package arq;
 
 /**
  *
- * @author piper
+ * @author Abraham Piperidis
  */
-@ApplicationPath("api")
-public class Startup {
-    
-    public Startup() {
-    }
+public class MainArq {
     
 }

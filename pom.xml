@@ -9,19 +9,22 @@
     
     <modules>
         <module>commons</module>
-        
         <module>app1</module>
         <module>app2</module>
-        
         <module>arquillian_deps</module>
-    </modules>
-    
+        <module>jasper-report-ejb</module>
+        <module>soap</module>
+    </modules> 
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>      
-        
-        <company.commons>1.0-SNAPSHOT</company.commons>
+        <!-- Our projects and versioning -->
+        <company.commons>1.0-SNAPSHOT</company.commons>        
         <arquillian.version>1.0-SNAPSHOT</arquillian.version>
-            
+        <soap.client.version>1.0.0</soap.client.version>
+        <soap.better.client.version>1.5.0-beta</soap.better.client.version>
+        
+        <!-- External dependencies and versioning -->        
         <junit.version>4.12</junit.version>
         <mockito.version>2.7.18</mockito.version>
         <javax.json.version>1.1</javax.json.version> 
@@ -44,6 +47,7 @@
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>${junit.version}</version>
+                <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>org.mockito</groupId>
@@ -59,9 +63,16 @@
                 <groupId>com.protectsoft.company</groupId>
                 <artifactId>arquillian_deps</artifactId>
                 <version>${arquillian.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.protectsoft.company</groupId>
+                <artifactId>external-soap-service-client</artifactId>
+                <version>${soap.client.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
+    
     
     
 </project>

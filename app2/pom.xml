@@ -23,7 +23,18 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>          
         <app2.jpa.version>1.0-SNAPSHOT</app2.jpa.version>  
         <app2.ejb.version>1.0-SNAPSHOT</app2.ejb.version>
+        <report.version>2.0.0</report.version>
     </properties>
+    
+    <dependencyManagement>
+        <dependencies>
+             <dependency>
+                <groupId>com.protectsoft.company</groupId>
+                <artifactId>jasper-report-ejb</artifactId>
+                <version>${report.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
   
     <dependencies>
          <dependency>
