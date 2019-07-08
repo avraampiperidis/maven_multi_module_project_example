@@ -15,21 +15,39 @@
         <module>jasper-report-ejb</module>
         <module>soap</module>
     </modules> 
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>      
-        <!-- Our projects and versioning -->
-        <company.commons>1.0-SNAPSHOT</company.commons>        
-        <arquillian.version>1.0-SNAPSHOT</arquillian.version>
-        <soap.client.version>1.0.0</soap.client.version>
-        <soap.better.client.version>1.5.0-beta</soap.better.client.version>
-        
-        <!-- External dependencies and versioning -->        
-        <junit.version>4.12</junit.version>
-        <mockito.version>2.7.18</mockito.version>
-        <javax.json.version>1.1</javax.json.version> 
-        <javax.version>7.0</javax.version> 
-    </properties>
+    
+    <profiles>
+        <profile>
+            <id>java-ee-7-profile</id>
+            <properties>
+                <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>      
+                <!-- Our projects and versioning -->
+                <company.commons>1.0-SNAPSHOT</company.commons>        
+                <arquillian.version>1.0-SNAPSHOT</arquillian.version>
+                <soap.client.version>1.0.0</soap.client.version>
+                <!-- External dependencies and versioning -->        
+                <junit.version>4.12</junit.version>
+                <mockito.version>2.7.18</mockito.version>
+                <javax.json.version>1.1</javax.json.version> 
+                <javax.version>7.0</javax.version>  
+            </properties>
+        </profile>
+        <profile>
+            <id>java-ee-8-profile</id>
+            <properties>
+                <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>      
+                <!-- Our projects and versioning -->
+                <company.commons>1.0-SNAPSHOT</company.commons>        
+                <arquillian.version>1.0-SNAPSHOT</arquillian.version>
+                <soap.client.version>1.5.0-beta</soap.client.version>
+                <!-- External dependencies and versioning -->        
+                <junit.version>4.12</junit.version>
+                <mockito.version>2.7.18</mockito.version>
+                <javax.json.version>1.1</javax.json.version> 
+                <javax.version>7.0</javax.version>  
+            </properties>
+        </profile>
+    </profiles>
     
     <dependencyManagement>
         <dependencies>      
